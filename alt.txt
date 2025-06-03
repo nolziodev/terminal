@@ -1,0 +1,24 @@
+# main.py
+from InquirerPy import inquirer
+
+def main():
+    answer = inquirer.select(
+        message="Choose an option:",
+        choices=[
+            "Say Hello",
+            "Add Two Numbers",
+            "Exit"
+        ],
+    ).execute()
+
+    if answer == "Say Hello":
+        print("Hello there!")
+    elif answer == "Add Two Numbers":
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+        print(f"The sum is: {a + b}")
+    elif answer == "Exit":
+        print("Goodbye!")
+
+if __name__ == "__main__":
+    main()
